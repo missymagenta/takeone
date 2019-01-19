@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<div class="headline" style="color:#ff00ff; font-weight:bold; font-size: 30px;"> * * {{ whatever }} * * </div><br>
+<form method="post">
+     {% csrf_token %}
+      Enter first number: <br>
+     <input name="num1" type="number"><br>
+     Enter second number: <br>
+     <input name="num2" type="number"><br><br>
+     Enter operator (+, -, *, /): <br>
+     <input name="operator" type="text"><br><br>
+
+     <input style="background-color:#ff00ff" type="submit" value="SHOW US WHAT YOU GOT!"><br><br>
+</form>
+
+<div style="color:#ff00ff; font-weight:bold;">Thank you! {{ num1 }} {{ operator }} {{ num2 }} = {{ result }}</div>
+
+</body>
+</html>
